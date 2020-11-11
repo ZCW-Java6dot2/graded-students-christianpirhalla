@@ -164,9 +164,9 @@ public class ClassroomTest {
     /** Should return a mapping of Student objects to a respective letter grade
      * determined by creating a grading curve such that:
      * A - upper 10th percentile
-     * B - between 11th and 29th
-     * C - between 30th and 50th
-     * D - between 49 and 11
+     * B - between 89th and 71st
+     * C - between 70th and 50th
+     * D - between 49th and 11th
      * F - lower than 11
      */
     @Test
@@ -203,8 +203,12 @@ public class ClassroomTest {
 
 
     }
-
-
+    /**
+     *
+     The following is just a test I made for the purposes of seeing what the curving would look like
+     over a larger set of data (and to mess around with enums)
+     *
+     */
     public enum firstNames{
         Jesse,
         Antônio,

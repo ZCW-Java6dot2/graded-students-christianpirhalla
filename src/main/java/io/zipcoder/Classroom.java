@@ -4,6 +4,15 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 
+/*
+/////////////   T O   D O   ////////////
+-cleaner percentile calculation.  Helper method?
+-make sure I'm doing the sorting in the best way possible
+    - Do I need a separate sort by ascending comparator? Can I just reverse the one I had?
+
+ */
+
+
 public class Classroom {
     private Student[] students;
 
@@ -57,6 +66,7 @@ public class Classroom {
         Arrays.sort(students, new SortByScoreAndLastName());
         return students;
     }
+
 
     public HashMap<Student, String> getGradebook(){
         //sort students
@@ -153,6 +163,7 @@ class SortByScoreAndLastNameAscending implements Comparator<Student>{
     }
 }
 
+// get all null values to the end of the array
 class SortNulls implements Comparator<Student>{
     public int compare(Student s1, Student s2){
         if (s1 == null && s2 == null){
@@ -164,7 +175,7 @@ class SortNulls implements Comparator<Student>{
         if (s2 == null){
             return -1;
         }
-        //if none of them are null, they can stay put
+        //if neither of them are null, they can stay put
         return 0;
     }
 }
